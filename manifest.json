@@ -5,12 +5,8 @@
   "description": "Highlight new articles on Hacker News since the last visit and highly commented articles.",
   "permissions": [
     "storage",
-    "tabs",
     "activeTab",
     "scripting"
-  ],
-  "host_permissions": [
-    "https://news.ycombinator.com/news"
   ],
   "background": {
     "service_worker": "background.js"

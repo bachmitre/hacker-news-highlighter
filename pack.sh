@@ -1,1 +1,1 @@
-zip -r tabmanager.zip * -x pictures -x pack.sh
+zip -r hackernewshighlighter.zip * -x pictures -x pack.sh -x pictures/*
