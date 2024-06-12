@@ -35,4 +35,11 @@
     const currentArticleIds = currentArticles.map(article => article.id);
     chrome.storage.local.set({ seenArticles: currentArticleIds });
   });
+
+   // Make all links open in a new tab
+  const allLinks = document.querySelectorAll('a');
+  allLinks.forEach(link => {
+    link.setAttribute('target', '_blank');
+  });
+
 })();
