@@ -25,6 +25,9 @@
                 commentColor = 'rgba(255,0,0, ' + transparency + ')';
                 if (commentColor) {
                   commentElement.style.backgroundColor = commentColor;
+                  if (commentCount > 200) {
+                    commentElement.style.color = 'white';
+                  }
                 }
               }
             }

@@ -1,1 +1,1 @@
-zip -r hackernewshighlighter.zip * -x pictures -x pack.sh -x pictures/*
+zip -r hackernewshighlighter.zip * -x "pictures/*" "pictures" -x "pack.sh" -x "README.md"
