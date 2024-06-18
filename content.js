@@ -1,6 +1,8 @@
+globalThis.browser ??= chrome;
+
 (function() {
   const HIGHLIGHT_CLASS = 'highlight-new-article';
-  chrome.storage.local.get('seenArticles', data => {
+  browser.storage.local.get('seenArticles', data => {
     const seenArticles = data.seenArticles || [];
     const currentArticles = Array.from(document.querySelectorAll('.athing'));
     currentArticles.forEach(article => {
@@ -36,10 +38,10 @@
       }
     });
     const currentArticleIds = currentArticles.map(article => article.id);
-    chrome.storage.local.set({ seenArticles: currentArticleIds });
+    browser.storage.local.set({ seenArticles: currentArticleIds });
   });
 
-   // Make all links open in a new tab
+  // Make all links open in a new tab
   const allLinks = document.querySelectorAll('a');
   allLinks.forEach(link => {
     link.setAttribute('target', '_blank');
